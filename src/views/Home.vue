@@ -20,7 +20,7 @@ export default {
     }
   },
   created () {
-    console.info(this.$store.state.test)
+    console.info(this.$store.state)
   }
 }
 </script>

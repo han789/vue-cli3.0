@@ -15,7 +15,7 @@ export default {
   },
   methods: {
     getList () {
-      api.getList().then(data => {
+      api.getList().then((data) => {
         console.info(data)
       })
     }

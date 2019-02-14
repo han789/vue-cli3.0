@@ -1,6 +1,8 @@
 import * as listApi from './list'
+import * as userApi from './user'
 
 let api = {
-  ...listApi
+  ...listApi,
+  ...userApi
 }
 export default api

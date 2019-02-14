@@ -90,10 +90,10 @@ export const ptn = {
   all_match: function (min = 0, max = 9999) {
     return '^[\\s\\S]{' + min + ',' + max + '}$'
   },
-  // 英文,点，中划线和下划线
-  en_dot_line: function (min = 0, max = 9999) {
-    return '^[-A-Za-z\._]{' + min + ',' + max + '}$'
-  },
+  // // 英文,点，中划线和下划线
+  // en_dot_line: function (min = 0, max = 9999) {
+  //   return '^[-A-Za-z\._]{' + min + ',' + max + '}$'
+  // },
   // 数字
   number: function (min = 0, max = 9999) {
     return '^[0-9]{' + min + ',' + max + '}$'

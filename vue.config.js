@@ -2,7 +2,9 @@ const path = require('path')
 const resolve = dir => path.join(__dirname, dir)
 
 module.exports = {
-  baseUrl: process.env.NODE_ENV === 'production' ? '/' : '/',
+  publicPath: process.env.NODE_ENV === 'production' ? '/' : '/',
+  // 当运行 vue-cli-service build 时生成的生产环境构建文件的目录
+  outputDir: 'dist',
   runtimeCompiler: true,
   // 配置路径别名
   chainWebpack: config => {
@@ -10,6 +12,13 @@ module.exports = {
       .set('@', resolve('src'))
       .set('@/components', resolve('src/components/'))
       .set('api', resolve('src/api/index.js'))
+  },
+  configureWebpack: config => {
+    if (process.env.NODE_ENV === 'production') {
+      // 生产环境修改配置...
+    } else {
+      // 开发环境修改配置...
+    }
   },
   // 全局注入通用样式
   css: {
