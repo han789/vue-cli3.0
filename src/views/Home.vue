@@ -1,7 +1,15 @@
+<style lang="less">
+  .home{
+    width: 90%;
+    min-width: 1000px;
+    margin: 0 auto;
+  }
+</style>
+
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HelloWorld :msg=msg />
   </div>
 </template>
 
@@ -16,7 +24,7 @@ export default {
   },
   data () {
     return {
-      msg: ''
+      msg: 'Welcome to Your Vue.js App1(父组件传过来的值)'
     }
   },
   created () {
