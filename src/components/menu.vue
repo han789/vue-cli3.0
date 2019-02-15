@@ -43,7 +43,7 @@
 
 <template>
   <div class="nav-main">
-    <Menu mode="horizontal" :active-name="$route.meta.active" @on-select="changeMenu">
+    <Menu mode="vertical" :active-name="$route.meta.active" :open-names='this.$store.state.db.arr' @on-select="changeMenu">
          <template v-for="item in menuList">
               <MenuItem v-if="item.children.length === 1" :key="item.name" :name="item.name">
                 <template >
@@ -72,7 +72,8 @@ export default {
   name: 'headMenuNav',
   data () {
     return {
-      num: '5'
+      num: '5',
+      arr: []
     }
   },
   props: {
@@ -83,6 +84,10 @@ export default {
       // return util.hasPermission(code)
     },
     changeMenu (active) {
+      this.$store.commit('getArr', [])
+      if (active.indexOf('other') !== -1) {
+        this.$store.commit('getArr', ['other'])
+      }
       this.$router.push({
         name: active
       })

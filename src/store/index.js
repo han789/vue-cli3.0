@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import VuexPersistence from 'vuex-persist'
 import user from './user/login'
+import db from './db'
 
 Vue.use(Vuex)
 const vuexLocal = new VuexPersistence({
@@ -19,7 +20,8 @@ const store = new Vuex.Store({
 
   },
   modules: {
-    user
+    user,
+    db
   },
   plugins: [vuexLocal.plugin]
 })

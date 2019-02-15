@@ -46,6 +46,7 @@ const user = {
             commit('SET_NAME', data.loginname)
             commit('SET_AVATAR', data.avatar_url)
             commit('SET_ROLES', data.githubUsername)
+            commit('SET_ISLOGINOUT', false)
             router.push({
               name: 'home'
             })

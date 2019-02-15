@@ -1,3 +1,9 @@
+<style lang="less">
+  .home{
+    display: flex;
+  }
+</style>
+
 <template>
   <div class="home">
     <headMenuNav :menuList=menuList />
@@ -11,7 +17,7 @@ import headMenuNav from '@/components/menu.vue'
 import { otherRouters } from '@/router/router'
 
 export default {
-  name: 'main',
+  name: 'Main',
   components: {
     headMenuNav
   },

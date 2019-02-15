@@ -4,6 +4,7 @@ const homeRouters = [{
   redirect: '/home',
   meta: {
     title: '首页',
+    active: 'main1',
     requireAuth: true // 添加该字段，表示进入这个路由是需要登录的
   },
   component: () =>
@@ -13,6 +14,7 @@ const homeRouters = [{
     name: 'home',
     meta: {
       title: '首页',
+      active: 'main1',
       requireAuth: true // 添加该字段，表示进入这个路由是需要登录的
     },
     component: () =>
@@ -24,6 +26,7 @@ const homeRouters = [{
   redirect: '/about',
   meta: {
     title: '关于',
+    active: 'main2',
     requireAuth: true // 添加该字段，表示进入这个路由是需要登录的
   },
   component: () =>
@@ -33,6 +36,7 @@ const homeRouters = [{
     name: 'about',
     meta: {
       title: '关于',
+      active: 'main2',
       requireAuth: true // 添加该字段，表示进入这个路由是需要登录的
     },
     component: () =>
